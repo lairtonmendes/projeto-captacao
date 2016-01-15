@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+	before_action :authenticate_user!
+	
 	def index
 		@coordenadas = Coordenada.all
     	@hash = Gmaps4rails.build_markers(@coordenadas) do |coordenadas, marker|

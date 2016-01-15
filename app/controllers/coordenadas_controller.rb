@@ -1,6 +1,6 @@
 class CoordenadasController < ApplicationController
   before_action :set_coordenada, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /coordenadas
   # GET /coordenadas.json
   def index
