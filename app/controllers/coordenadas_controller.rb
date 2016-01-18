@@ -24,6 +24,7 @@ class CoordenadasController < ApplicationController
   # POST /coordenadas
   # POST /coordenadas.json
   def create
+    puts " aqui"
     @coordenada = Coordenada.new(coordenada_params)
 
     respond_to do |format|
